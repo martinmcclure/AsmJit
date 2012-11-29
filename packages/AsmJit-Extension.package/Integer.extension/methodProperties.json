@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"&" : "CamilloBruni 3/27/2012 17:18",
+		"asAJOperand" : "",
+		"asByte" : "",
+		"asDoubleWord" : "",
+		"asImm" : "",
+		"asImm16" : "",
+		"asImm32" : "",
+		"asImm8" : "",
+		"asQuadWord" : "",
+		"asTwosComplement:" : "",
+		"asUImm" : "",
+		"asUImm16" : "",
+		"asUImm32" : "",
+		"asUImm8" : "",
+		"asWord" : "",
+		"bin" : "CamilloBruni 5/14/2012 17:18",
+		"isByte" : "",
+		"printAsOperandOn:" : "" } }
