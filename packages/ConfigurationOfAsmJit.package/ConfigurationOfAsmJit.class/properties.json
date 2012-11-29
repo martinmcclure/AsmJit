@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfAsmJit",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfAsmJit",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
