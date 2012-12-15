@@ -501,6 +501,7 @@ instructionData
 (#subps #mmurmi "op1" 2r100000 "op2" 2r1100000 "R" 0 "C1" 16r00000F5C 0 )
 (#subsd #mmurmi "op1" 2r100000 "op2" 2r1100000 "R" 0 "C1" 16rF2000F5C 0 )
 (#subss #mmurmi "op1" 2r100000 "op2" 2r1100000 "R" 0 "C1" 16rF3000F5C 0 )
+(#syscall #emit "op1" 2r100000000 0 "R" 0 "C1" 16r00000F05 0 )
 (#test #test 0 0 "R" 0 0 0 )
 (#ucomisd #mmurmi "op1" 2r100000 "op2" 2r1100000 "R" 0 "C1" 16r66000F2E 0 )
 (#ucomiss #mmurmi "op1" 2r100000 "op2" 2r1100000 "R" 0 "C1" 16r00000F2E 0 )

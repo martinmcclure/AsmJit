@@ -27,6 +27,7 @@
 		"testNeg" : "",
 		"testPop" : "",
 		"testPush" : "",
+		"testSyscall" : "MartinMcClure 12/15/2012 13:13",
 		"testTest" : "",
 		"testXor" : "",
 		"testXorFastCode" : "",

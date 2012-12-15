@@ -324,6 +324,7 @@
 		"stmxcsr:" : "CamilloBruni 7/17/2012 13:38",
 		"strackFrameValueAtOffset:" : "",
 		"sub:with:" : "CamilloBruni 7/17/2012 13:38",
+		"syscall" : "MartinMcClure 12/15/2012 13:37",
 		"test:with:" : "CamilloBruni 7/17/2012 13:38",
 		"undefinedLabels" : "",
 		"uniqueLabelName:" : "",
