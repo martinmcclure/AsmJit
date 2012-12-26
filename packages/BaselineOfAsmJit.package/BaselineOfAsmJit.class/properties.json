@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfAsmJit",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfAsmJit",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
