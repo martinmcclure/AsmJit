@@ -15,4 +15,4 @@ baseline: spec
 					with: [ spec requires: #('AsmJit-Extension' 'AsmJit-Instructions' 'AsmJit-Operands' 'AsmJit-StackManagement') ].
 			spec
 				group: 'default' with: #('AsmJit-x86');
-				group: 'Tests' with: #('AsmJit-x86') ]
+				group: 'Tests' with: #('AsmJit-Tests') ]
