@@ -5,8 +5,7 @@ testAssembly3
 
 	(AJInstructionDescription instructions select: [:each | each group = #emit]) keys asSortedCollection
 	 "
-	| asm str |
-	asm := self newAssembler.
+	| str |
 	str :=
 #(
 #cbw 16r66 16r98

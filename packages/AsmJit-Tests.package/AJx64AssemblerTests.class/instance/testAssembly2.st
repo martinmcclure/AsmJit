@@ -2,13 +2,13 @@ tests
 testAssembly2
 
 	self 
-		assert: [ :asm|
+		assert: [ :a|
 		asm 
-			push: asm BP;
-			mov: asm SP -> asm BP;
-			mov: 16r400 -> asm RAX;
-			mov: asm BP -> asm SP;
-			pop: asm RSP;
+			push: a BP;
+			mov: a SP -> a BP;
+			mov: 16r400 -> a RAX;
+			mov: a BP -> a SP;
+			pop: a RSP;
 			ret. ]
 		bytes: #[
 			102 85

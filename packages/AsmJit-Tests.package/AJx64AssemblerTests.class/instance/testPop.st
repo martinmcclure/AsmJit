@@ -1,5 +1,5 @@
 tests
 testPop
 	"lower bank 64bit register"		
-	self assert: [:asm| asm pop: asm RSP ]
+	self assert: [:a | a pop: a RSP ]
 		bytes: #[ 16r5c ].

@@ -3,13 +3,13 @@ testAssembly1
 
 	
 	self 
-		assert: [ :asm|
-			asm 
-				push: asm RBP;
-				mov: asm RSP -> asm RBP;
-				mov: 1024 -> asm RAX;
-				mov: asm RBP -> asm RSP;
-				pop: asm RBP;
+		assert: [ :a|
+			a 
+				push: a RBP;
+				mov: a RSP -> a RBP;
+				mov: 1024 -> a RAX;
+				mov: a RBP -> a RSP;
+				pop: a RBP;
 				ret.]	
 		bytes: #[
 			85 

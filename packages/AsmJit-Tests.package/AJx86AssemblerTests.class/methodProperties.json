@@ -4,7 +4,7 @@
 	"instance" : {
 		"asmShould:raise:" : "",
 		"assert:bytes:" : "CamilloBruni 8/22/2012 14:47",
-		"bytes:" : "",
+		"bytes:" : "MartinMcClure 1/1/2013 22:19",
 		"newAssembler" : "CamilloBruni 4/3/2012 09:56",
 		"setUp" : "",
 		"setUpDataBytes" : "CamilloBruni 4/12/2012 14:25",

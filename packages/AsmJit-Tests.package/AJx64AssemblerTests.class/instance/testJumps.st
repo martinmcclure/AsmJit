@@ -1,12 +1,9 @@
 tests
 testJumps
 
-	| assembler |
-	
-	assembler := self newAssembler.
 	self 
-		assert: [:asm|
-			asm 
+		assert: [:a|
+			a 
 				label: #label1;
 				nop;
 				nop;
@@ -16,17 +13,17 @@ testJumps
 	
 	
 	
-	assembler 
+	asm 
 		reset; noStackFrame;
 		label: #label1.
-		126 timesRepeat: [ assembler nop ].
-		assembler jz: #label1.
-	self assert: (assembler bytes size = 128).
+		126 timesRepeat: [ asm nop ].
+		asm jz: #label1.
+	self assert: (asm bytes size = 128).
 
 
 	self 
-		assert: [:asm|
-			asm 
+		assert: [:a |
+			a
 				reset; noStackFrame;
 				label: #label1;
 				nop;
@@ -36,8 +33,8 @@ testJumps
 		] bytes: #[144 144 144 235 251 ].
 	
 	self 
-		assert: [:asm|
-			asm 
+		assert: [:a |
+			a 
 				reset; noStackFrame;
 				jmp: #label1;
 				label: #label1.
