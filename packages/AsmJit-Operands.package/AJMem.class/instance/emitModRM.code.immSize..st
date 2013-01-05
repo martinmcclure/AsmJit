@@ -1,6 +1,6 @@
 emitting
 emitModRM: emitter code: rCode immSize: immSize
-	"Receiver is memory location"
+	"Receiver is memory location. rCode is a register number"
 
 	"[base + displacement]"
 	(self hasBase and: [ self hasIndex not ])
