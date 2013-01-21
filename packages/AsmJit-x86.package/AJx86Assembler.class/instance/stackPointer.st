@@ -1,3 +1,3 @@
 register
 stackPointer
-	^ self is32BitMode ifTrue: [ ESP ] ifFalse: [ SP ]
+	^ self is32 ifTrue: [ ESP ] ifFalse: [ RSP ]
