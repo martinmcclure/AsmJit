@@ -6,8 +6,9 @@ baseline: spec
 		do: [ 
 			spec
 				package: 'AsmJit-Core';
-				package: 'AsmJit-Extension' with: [ spec requires: #('AsmJit-Operands') ];
+				package: 'AsmJit-Extension' with: [ spec requires: #('AsmJit-Operands' 'AsmJit-Legacy') ];
 				package: 'AsmJit-Instructions' with: [ spec requires: #('AsmJit-Core') ];
+				package: 'AsmJit-Legacy';
 				package: 'AsmJit-Operands' with: [ spec requires: #('AsmJit-Core') ];
 				package: 'AsmJit-StackManagement' with: [ spec requires: #('AsmJit-Instructions') ];
 				package: 'AsmJit-Tests' with: [ spec requires: #('AsmJit-x86') ];
