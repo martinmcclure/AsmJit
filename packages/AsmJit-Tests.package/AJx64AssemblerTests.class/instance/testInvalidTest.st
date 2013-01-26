@@ -8,8 +8,9 @@ testInvalidTest
 	BH}
 		do: [ :reg | 
 			self deny: (self bytes: [ :a | a test: reg with: AL ]) isEmpty.
+			self deny: (self bytes: [ :a | a test: AL with: reg ]) isEmpty.
 			self deny: (self bytes: [ :a | a test: reg with: 16r12 ]) isEmpty.	"with an upper bank byte register => requires REX prefix"
-			self asmShould: [ :a | a test: reg with: a R8B ] raise: Error.
-			self asmShould: [ :a | a test: a R8B with: reg ] raise: Error.	"with a 64bit register requring again an REX prefix"
-			self asmShould: [ :a | a test: reg with: a RAX ] raise: Error.
-			self asmShould: [ :a | a test: a RAX with: reg ] raise: Error ]
+			self asmShould: [ :a | a test: reg with: R8B ] raise: Error.
+			self asmShould: [ :a | a test: R8B with: reg ] raise: Error.	"with a 64bit register requring again an REX prefix"
+			self asmShould: [ :a | a test: reg with: RAX ] raise: Error.
+			self asmShould: [ :a | a test: RAX with: reg ] raise: Error ]
