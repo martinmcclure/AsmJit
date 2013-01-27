@@ -8,8 +8,8 @@ testHighByteRegistersInvalid
 	CH.
 	DH.
 	BH}.
-	opBothCodes := #(#adc:with: #add:with: #mov:to: #cmp:with: #or:with: #sbb:with: #sub:with #xadd:with: #xchg:with: #xor:with:).
-	op2codes := #(#cmpxchg:with: #test:with:).
+	opBothCodes := #(#adc:with: #add:with: #mov:to: #cmp:with: #or:with: #sbb:with: #sub:with #xchg:with: #xor:with:).
+	op2codes := #(#cmpxchg:with: #test:with: #xadd:with:).
 	mixedWidthOpCodes := #(#crc32:with: #movsx:to: #movzx:to:).
 	wideRegistersRequiringRex := {RAX.
 	R8D}.	"RAX requires REX.W, R8D requires REX.R or REX.B"
