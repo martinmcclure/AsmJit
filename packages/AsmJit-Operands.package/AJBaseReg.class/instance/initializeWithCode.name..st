@@ -1,5 +1,5 @@
 initialize-release
 initializeWithCode: aRegisterCode name: aSymbol
 	super initialize.
-	code := aRegisterCode.
+	self code: aRegisterCode.	"Also sets size"
 	name := aSymbol

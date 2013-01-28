@@ -1,6 +1,8 @@
 initialization
 initialize
 
+	"AJConstants initialize"
+	
 	"Operand is none, used only internally."
 	OpNONE := 0.
 	"Operand is register"
@@ -14,6 +16,8 @@ initialize
 
 	RegTypeMask := 16rF0.
 	RegCodeMask := 16r0F.
+	RegRequiresRexMask := 16r100.
+	RegProhibitsRexMask := 16r200.
 	RegHighByteMask := 2r111100.
 	
 	"1 byte size."

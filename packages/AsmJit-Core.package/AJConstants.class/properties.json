@@ -108,6 +108,8 @@
 		"RegGPW",
 		"RegHighByteMask",
 		"RegMM",
+		"RegProhibitsRexMask",
+		"RegRequiresRexMask",
 		"RegTypeMask",
 		"RegX87",
 		"RegXMM",

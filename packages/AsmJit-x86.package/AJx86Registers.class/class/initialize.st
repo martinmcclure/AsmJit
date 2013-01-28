@@ -1,7 +1,7 @@
 initialization
 initialize
-	| author |
-	
+	"AJx86Registers initialize"
+		
 	self classPool at: #Codes put: IdentityDictionary new. 
 	
 	self initializeGeneralPurpose8BitRegisters.
