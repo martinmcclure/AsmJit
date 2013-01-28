@@ -52,7 +52,7 @@
 		"emitrot:operand1:operand2:operand3:" : "",
 		"emitrrm:operand1:operand2:operand3:" : "",
 		"emitshldShrd:operand1:operand2:operand3:" : "",
-		"emittest:operand1:operand2:operand3:" : "CamilloBruni 3/30/2012 17:36",
+		"emittest:operand1:operand2:operand3:" : "MartinMcClure 1/27/2013 21:06",
 		"emitx87addp:operand1:operand2:operand3:" : "CamilloBruni 7/17/2012 11:10",
 		"emitx87fpu:operand1:operand2:operand3:" : "",
 		"emitx87fstsw:operand1:operand2:operand3:" : "",

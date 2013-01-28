@@ -1,3 +1,4 @@
 accessing
 operands: anObject
-	operands := anObject
+	operands := anObject.
+	self checkOperandsForConflict

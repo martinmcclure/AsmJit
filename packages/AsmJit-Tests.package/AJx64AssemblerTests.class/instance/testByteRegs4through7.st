@@ -19,10 +19,9 @@ testByteRegs4through7
 	(#xor:with: -> #(16r30 16r32))}.	"op2Codes -- #selector -> multiByteBytecode. ByteReg is always the second arg"
 	op2codes := {(#cmpxchg:with: -> #[16r0F 16rB0]).
 	(#test:with: -> #[16r84]).
-	(#xadd:with: -> #[16r0F 16rC0]).
-	(#xchg:with: -> #[16r86])}.	"mixedWidthOpCodes -- #selector -> multiByteBytecode. ByteReg is always the second arg"
-	mixedWidthOpCodes := {(#movsx:to: -> #[16r0F 16rBE]).
-	(#movzx:to: -> #[16r0F 16rB6])}.	"**** Handle #crc32:with: separately due to its legacy prefix ****"	"wideRegisters -- register -> #[REX prefix, contribution to ModRM byte when used as r/m operand]"
+	(#xadd:with: -> #[16r0F 16rC0])	"xchg is not actually supported at this time (#xchg:with: -> #[16r86])"}.	"mixedWidthOpCodes -- #selector -> multiByteBytecode. ByteReg is always the second arg"
+	mixedWidthOpCodes := {(#movsx:with: -> #[16r0F 16rBE]).
+	(#movzx:with: -> #[16r0F 16rB6])}.	"**** Handle #crc32:with: separately due to its legacy prefix ****"	"wideRegisters -- register -> #[REX prefix, contribution to ModRM byte when used as r/m operand]"
 	wideRegisters := {(EAX -> #[16r40 16rC0]).
 	(RAX -> #[16r48 16rC0]).
 	(R8D -> #[16r44 16rC0]).
@@ -37,36 +36,38 @@ testByteRegs4through7
 	(RAX ptr -> #(16r40 #[16r00])).
 	(R8 ptr + 16r12 -> #(16r41 #[16r40 16r12])).
 	(RAX ptr + 16r12 -> #(16r40 #[16r40 16r12])).
-	(R8 ptr + 16r1234 -> #(16r41 #[16r80 16r00 16r00 16r34 16r12])).
-	(RAX ptr + 16r1234 -> #(16r40 #[16r80 16r00 16r00 16r34 16r12])).
+	(R8 ptr + 16r1234 -> #(16r41 #[16r80 16r34 16r12 16r00 16r00])).
+	(RAX ptr + 16r1234 -> #(16r40 #[16r80 16r34 16r12 16r00 16r00])).
 	((RAX ptr + R8) * 2 -> #(16r42 #[16r04 16r40])).
 	((RAX ptr + RAX) * 2 -> #(16r40 #[16r04 16r40])).
 	((RAX ptr + R8) * 4 + 16r12 -> #(16r42 #[16r44 16r80 16r12])).
 	((RAX ptr + RAX) * 4 + 16r12 -> #(16r40 #[16r44 16r80 16r12])).
-	((RAX ptr + R8) * 8 + 16r1234 -> #(16r42 #[16r84 16r80 16r00 16r00 16r34 16r12])).
-	((RAX ptr + RAX) * 8 + 16r1234 -> #(16r40 #[16r84 16r80 16r00 16r00 16r34 16r12]))}.
+	((RAX ptr + R8) * 8 + 16r1234 -> #(16r42 #[16r84 16rC0 16r34 16r12 16r00 16r00])).
+	((RAX ptr + RAX) * 8 + 16r1234 -> #(16r40 #[16r84 16rC0 16r34 16r12 16r00 16r00]))}.
 	byteRegs
 		do: [ :reg | 
 			byteRMOperands
 				do: [ :rm | 
 					opBothCodes
 						do: [ :opcode | 
+							| opcodeByte op1 op2 |
+							op1 := reg key.
+							op2 := rm key.
+							opcodeByte := opcode value last.
 							self
-								assert: [ :a | a perform: opcode key with: rm key with: reg key ]
+								assert: [ :a | a perform: opcode key with: op1 with: op2 ]
 								bytes:
-									(ByteArray with: rm value first with: opcode value first with: reg value | rm value last first)
-										, rm value last allButFirst	"REX"	"ModRM"	"SIB and displacement"	"Need to add the necessary data to allow testing the reverse order of operands." ].
+									(ByteArray with: rm value first with: opcodeByte with: reg value | rm value last first) , rm value last allButFirst	"REX"	"ModRM"	"SIB and displacement"	"Need to add the necessary data to allow testing the reverse order of operands." ].
 					op2codes
 						do: [ :opcode | 
 							self
 								assert: [ :a | a perform: opcode key with: rm key with: reg key ]
 								bytes:
-									((ByteArray with: rm value first) , opcode value copyWith: reg value | rm value first) , rm value allButFirst	"REX"	"ModRM"	"SIB and displacement" ] ].
+									((ByteArray with: rm value first) , opcode value copyWith: reg value | rm value last first) , rm value last allButFirst	"REX"	"ModRM"	"SIB and displacement" ] ].
 			mixedWidthOpCodes
 				do: [ :opcode | 
 					wideRegisters
 						do: [ :rm | 
 							self
 								assert: [ :a | a perform: opcode key with: rm key with: reg key ]
-								bytes:
-									((ByteArray with: rm value first) , opcode value copyWith: reg value | rm value first) , rm value allButFirst	"REX"	"ModRM"	"SIB and displacement" ] ] ]
+								bytes: ((ByteArray with: rm value first) , opcode value copyWith: reg value >> 3 | rm value last)	"REX"	"ModRM"	"SIB and displacement" ] ] ]
