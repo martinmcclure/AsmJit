@@ -112,6 +112,6 @@
 		 ],
 	"name" : "AJx86Registers",
 	"pools" : [
-		 ],
+		"AJConstants" ],
 	"super" : "SharedPool",
 	"type" : "normal" }

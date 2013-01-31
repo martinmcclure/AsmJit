@@ -3,11 +3,10 @@ checkOperandsForConflict
 	"Signal an error if the given operands cannot be used together. Must be sent after operands are set."
 
 	| prohibited required |
-	prohibited := required := false.
+	required := self requiresRex.
+	prohibited := false.
 	operands
 		do: [ :op | 
-			op asAJOperand requiresRex
-				ifTrue: [ required := true ].
 			op asAJOperand prohibitsRex
 				ifTrue: [ prohibited := true ] ].
 	prohibited & required

@@ -1,3 +1,10 @@
 testing
 requiresRex
-	^ (operands detect: [ :op | op requiresRex ] ifNone: [ #none ]) ~~ #none
+	"Answer true if I absolutely must have a REX prefix."
+
+	^ (operands
+		detect: [ :rawOp | 
+			| op |
+			op := rawOp asAJOperand.
+			op requiresRex | op is64 ]
+		ifNone: [ #none ]) ~~ #none
