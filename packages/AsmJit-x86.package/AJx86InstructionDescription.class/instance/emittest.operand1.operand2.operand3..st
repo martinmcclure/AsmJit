@@ -9,7 +9,6 @@ emittest: emitter operand1: op1 operand2: op2 operand3: op3
 						error:
 							'Operands ' , op1 asString , ' and ' , op2 asString , ' don''t match in size: ' , op1 size asString , ' != '
 								, op2 size asString ].
-			self upperBankHighByteGuardOp1: op1 op2: op2.
 			^ emitter
 				emitX86RM: 16r84 + op2 isRegTypeGPB not asBit
 				size: op2 size
