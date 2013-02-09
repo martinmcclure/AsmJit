@@ -1,0 +1,14 @@
+{
+	"category" : "AsmJit-x86-Instructions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "AJExternalLabel",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
