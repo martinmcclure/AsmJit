@@ -7,7 +7,7 @@ checkOperandsForConflict
 	prohibited := false.
 	operands
 		do: [ :op | 
-			op asAJOperand prohibitsRex
+			(op isInteger not and: [ op prohibitsRex ])
 				ifTrue: [ prohibited := true ] ].
 	prohibited & required
 		ifTrue: [ self error: 'Mix of operands that require and prohibit a REX prefix' ]

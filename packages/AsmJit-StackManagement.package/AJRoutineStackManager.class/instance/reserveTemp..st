@@ -4,4 +4,4 @@ reserveTemp: anAJReserveTemp
 	temps := temps + 1.
 	maxTemps := maxTemps max: temps .
 	
-	anAJReserveTemp operand: (assembler strackFrameValueAtOffset: extraStackBytes + (temps * assembler wordSize )).
+	anAJReserveTemp operand: (assembler stackFrameValueAtOffset: extraStackBytes + (temps * assembler wordSize )).
