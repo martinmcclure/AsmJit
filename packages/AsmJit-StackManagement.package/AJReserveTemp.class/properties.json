@@ -4,9 +4,8 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "IgorStasenko 1/18/2012 13:09",
+	"commentStamp" : "MartinMcClure 2/9/2013 14:17",
 	"instvars" : [
-		"operand",
 		"size" ],
 	"name" : "AJReserveTemp",
 	"pools" : [

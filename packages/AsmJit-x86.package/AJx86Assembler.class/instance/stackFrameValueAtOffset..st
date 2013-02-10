@@ -1,4 +1,4 @@
 stack management
-strackFrameValueAtOffset: offset
+stackFrameValueAtOffset: offset
 
 	^ EBP ptr32 - offset
