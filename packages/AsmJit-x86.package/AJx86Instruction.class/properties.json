@@ -4,9 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "MartinMcClure 2/10/2013 21:32",
 	"instvars" : [
-		"description" ],
+		"description",
+		"externalReferences" ],
 	"name" : "AJx86Instruction",
 	"pools" : [
 		 ],

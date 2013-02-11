@@ -1,0 +1,17 @@
+{
+	"category" : "AsmJit-x86-Operands",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "MartinMcClure 2/10/2013 19:28",
+	"instvars" : [
+		"target",
+		"routine",
+		"offset",
+		"isResolved" ],
+	"name" : "AJExternalReference",
+	"pools" : [
+		 ],
+	"super" : "AJOperand",
+	"type" : "normal" }

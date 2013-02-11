@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"accept:" : "",
+		"addExternalReference:" : "MartinMcClure 2/10/2013 21:34",
 		"checkOperandsForConflict" : "MartinMcClure 2/9/2013 14:15",
 		"description" : "CamilloBruni 4/17/2012 17:55",
 		"description:" : "CamilloBruni 4/17/2012 17:55",
@@ -27,9 +28,11 @@
 		"emitX86Inl:reg:withRex:" : "",
 		"emitX86RM:size:regOrCode:rm:" : "",
 		"emitX86RM:size:regOrCode:rm:immSize:" : "CamilloBruni 3/30/2012 16:50",
+		"initialize" : "MartinMcClure 2/10/2013 21:33",
 		"instructionDesciptions" : "CamilloBruni 8/23/2012 16:01",
 		"is32BitMode" : "",
 		"is64BitMode" : "",
 		"isGPNRegister:" : "",
+		"prohibitsRex" : "MartinMcClure 2/10/2013 16:15",
 		"requiresRex" : "MartinMcClure 1/27/2013 15:47",
 		"setLabelPosition:" : "" } }

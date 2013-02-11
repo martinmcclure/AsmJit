@@ -1,9 +1,9 @@
 tests
 testExternalLabelSimple
 	| asm1 asm2 label routine1 routine2 firstFreeAddress |
-	asm1 := asm class noStackFrame.
-	asm2 := asm class noStackFrame.
-	label := AJExternalLabel new: 'MyRoutine'.
+	asm1 := self newAssembler.
+	asm2 := self newAssembler.
+	label := asm newExternalLabel: 'MyRoutine'.
 	asm1 label: label.
 	asm1 ret.
 	routine1 := asm1 generatedCode.

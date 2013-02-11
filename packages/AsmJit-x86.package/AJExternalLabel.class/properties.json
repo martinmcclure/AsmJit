@@ -4,11 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "MartinMcClure 2/10/2013 15:53",
 	"instvars" : [
-		 ],
+		"routine",
+		"offset",
+		"references",
+		"isSet" ],
 	"name" : "AJExternalLabel",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "AJx86Instruction",
 	"type" : "normal" }

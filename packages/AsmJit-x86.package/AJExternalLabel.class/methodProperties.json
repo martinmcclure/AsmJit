@@ -1,5 +1,12 @@
 {
 	"class" : {
-		 },
+		"withDescription:" : "MartinMcClure 2/10/2013 15:50" },
 	"instance" : {
-		 } }
+		"asAJOperand" : "MartinMcClure 2/10/2013 19:30",
+		"description:" : "MartinMcClure 2/10/2013 15:51",
+		"emitCode:" : "MartinMcClure 2/10/2013 16:06",
+		"initialize" : "MartinMcClure 2/10/2013 15:53",
+		"isSet" : "MartinMcClure 2/10/2013 15:54",
+		"isSet:" : "MartinMcClure 2/10/2013 15:54",
+		"printAsOperandOn:" : "MartinMcClure 2/10/2013 16:21",
+		"printOn:" : "MartinMcClure 2/10/2013 16:20" } }
