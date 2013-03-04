@@ -19,7 +19,7 @@ so once the bytes are installed in the given absolute addresses the call
 will go to the right place."
 	self
 		assert: routine1 bytes equals: #[16rC3];
-		assert: routine2 bytes equals: #[16rE8 16rFF 16rFF 16rFF 16rFA].
+		assert: routine2 bytes equals: #[16rE8 16rFA 16rFF 16rFF 16rFF].
 	self
 		assert: routine1 startAddress equals: 16r400078;
 		assert: routine2 startAddress equals: 16r400079

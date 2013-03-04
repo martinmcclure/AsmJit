@@ -4,10 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "MartinMcClure 2/11/2013 20:54",
 	"instvars" : [
 		"bytes",
-		"labels" ],
+		"labels",
+		"externalLabels",
+		"externalReferences",
+		"startAddress" ],
 	"name" : "AJGeneratedCode",
 	"pools" : [
 		 ],

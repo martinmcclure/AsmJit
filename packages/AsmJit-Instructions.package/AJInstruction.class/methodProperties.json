@@ -9,6 +9,7 @@
 		"do:" : "",
 		"emitCode:" : "",
 		"emitCodeAtOffset:assembler:" : "",
+		"externalReference" : "MartinMcClure 2/11/2013 21:23",
 		"extractLabels:" : "",
 		"find:" : "",
 		"hasLabel" : "",
@@ -41,5 +42,6 @@
 		"printStringLimitedTo:" : "",
 		"processTempsWith:" : "",
 		"replace:with:" : "",
+		"routine:" : "MartinMcClure 3/2/2013 14:50",
 		"setPrologue:" : "",
 		"storeOn:" : "" } }

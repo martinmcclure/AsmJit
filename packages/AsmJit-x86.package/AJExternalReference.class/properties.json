@@ -9,7 +9,9 @@
 		"target",
 		"routine",
 		"offset",
-		"isResolved" ],
+		"isResolved",
+		"targetAddress",
+		"patchAddress" ],
 	"name" : "AJExternalReference",
 	"pools" : [
 		 ],

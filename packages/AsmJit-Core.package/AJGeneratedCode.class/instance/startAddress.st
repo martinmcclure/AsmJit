@@ -1,0 +1,3 @@
+external labels
+startAddress
+	^ startAddress

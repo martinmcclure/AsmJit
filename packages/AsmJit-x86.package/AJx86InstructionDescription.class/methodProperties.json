@@ -21,7 +21,7 @@
 		"emitalu:operand1:operand2:operand3:" : "",
 		"emitbswap:operand1:operand2:operand3:" : "",
 		"emitbt:operand1:operand2:operand3:" : "CamilloBruni 5/15/2012 14:18",
-		"emitcall:operand1:operand2:operand3:" : "MartinMcClure 2/10/2013 21:38",
+		"emitcall:operand1:operand2:operand3:" : "MartinMcClure 2/11/2013 21:13",
 		"emitcjmp:operand1:operand2:operand3:" : "",
 		"emitcrc32:operand1:operand2:operand3:" : "",
 		"emitemit:operand1:operand2:operand3:" : "",
