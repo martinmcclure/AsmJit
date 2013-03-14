@@ -6,8 +6,7 @@
 		 ],
 	"commentStamp" : "MartinMcClure 2/11/2013 21:15",
 	"instvars" : [
-		"description",
-		"externalReference" ],
+		"description" ],
 	"name" : "AJx86Instruction",
 	"pools" : [
 		 ],

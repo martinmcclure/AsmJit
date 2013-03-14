@@ -1,5 +1,5 @@
 tests
-testExternalLabelSimple
+testExternalLabelSimpleCall
 	| asm1 asm2 label routine1 routine2 firstFreeAddress |
 	asm1 := self newAssembler.
 	asm2 := self newAssembler.

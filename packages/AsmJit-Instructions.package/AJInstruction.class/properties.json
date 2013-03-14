@@ -12,7 +12,8 @@
 		"position",
 		"next",
 		"annotation",
-		"level" ],
+		"level",
+		"externalReference" ],
 	"name" : "AJInstruction",
 	"pools" : [
 		 ],

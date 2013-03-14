@@ -28,7 +28,7 @@
 		"emitenter:operand1:operand2:operand3:" : "",
 		"emitimul:operand1:operand2:operand3:" : "CamilloBruni 4/17/2012 19:02",
 		"emitincdec:operand1:operand2:operand3:" : "",
-		"emitjmp:operand1:operand2:operand3:" : "",
+		"emitjmp:operand1:operand2:operand3:" : "MartinMcClure 3/13/2013 13:34",
 		"emitlea:operand1:operand2:operand3:" : "CamilloBruni 4/17/2012 17:41",
 		"emitmem:operand1:operand2:operand3:" : "",
 		"emitmmuMov:operand1:operand2:operand3:" : "",

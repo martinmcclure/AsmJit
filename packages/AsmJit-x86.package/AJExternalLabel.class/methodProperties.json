@@ -8,6 +8,8 @@
 		"emitCode:" : "MartinMcClure 3/2/2013 14:51",
 		"initialize" : "MartinMcClure 2/10/2013 15:53",
 		"is64" : "MartinMcClure 3/3/2013 22:58",
+		"isExternalLabel" : "MartinMcClure 3/12/2013 16:46",
+		"isLabel" : "MartinMcClure 3/12/2013 16:06",
 		"isSet" : "MartinMcClure 2/10/2013 15:54",
 		"isSet:" : "MartinMcClure 2/10/2013 15:54",
 		"printAsOperandOn:" : "MartinMcClure 2/10/2013 16:21",
