@@ -31,6 +31,7 @@
 		"instructionDesciptions" : "CamilloBruni 8/23/2012 16:01",
 		"is32BitMode" : "",
 		"is64BitMode" : "",
+		"isExternalLabel" : "MartinMcClure 7/28/2013 11:18",
 		"isGPNRegister:" : "",
 		"prohibitsRex" : "MartinMcClure 2/10/2013 16:15",
 		"requiresRex" : "MartinMcClure 1/27/2013 15:47" } }

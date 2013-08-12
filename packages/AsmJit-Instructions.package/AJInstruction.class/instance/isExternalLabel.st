@@ -1,0 +1,3 @@
+testing
+isExternalLabel
+	^ false
